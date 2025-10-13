@@ -5,7 +5,7 @@ if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
 pcall(function()
     if game.PlaceId == 79546208627805 or game.PlaceId == 126509999114328 then -- 99 Nights in the Forest
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostSobe/Script/refs/heads/main/99%20Nights%20in%20the%20Forest"))();
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/99%20nights%20in%20the%20forest"))();
     elseif game.PlaceId == 129827112113663 then -- Prospecting
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostSobe/Script/refs/heads/main/Prospecting"))();
     elseif game.PlaceId == 292439477 then -- Phantom Forces
