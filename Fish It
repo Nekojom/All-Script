@@ -58,7 +58,7 @@ do
 
     Tabs.Script:AddSection(" Key / มีคีย์ ")
 
-    local Dropdown = Tabs.Script:AddDropdown("Dropdown", {
+    local Dropdown = Tabs.Fish:AddDropdown("Dropdown", {
         Title = "Select Scripts",
         Values = Script,
         Multi = false,
