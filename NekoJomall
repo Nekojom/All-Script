@@ -24,7 +24,7 @@ pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua"))();
     elseif game.GameId == 7750955984 then -- Hunty Zombie
         loadstring(game:HttpGet("https://bonkhub.online/loader.lua",true))();
-    elseif game.GameId == 7326934954 then -- Hunty zombie
+    elseif game.GameId == 7750955984 then -- Hunty zombie
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Hunty%20zombie"))();
     elseif game.GameId == 8316902627 then -- Plants Vs Brainrots
         loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))();
