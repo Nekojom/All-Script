@@ -5,7 +5,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostSobe/Library/refs/heads/main/Fluent/InterfaceManager"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Nekojom | All Scripts",
+    Title = "Nekojom | Fish It",
     SubTitle = "by jom",
     TabWidth = 160,
     Size = UDim2.fromOffset(550, 350),
