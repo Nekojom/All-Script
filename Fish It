@@ -16,7 +16,6 @@ local Window = Fluent:CreateWindow({
 
 local Tabs = {
     Home = Window:AddTab({ Title = "Home", Icon = "home" }),
-    Script = Window:AddTab({ Title = "Script", Icon = "rbxassetid://10734907168" }),
     Fish = Window:AddTab({ Title = "Fish It", Icon = "rbxassetid://10734907168" }),
     Player = Window:AddTab({ Title = "Player", Icon = "rbxassetid://10747373176" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
@@ -28,12 +27,10 @@ local Plr = game:GetService("Players")
 local LocalPlr = Plr.LocalPlayer
 local StarterGui = game:GetService("StarterGui")
 
-local Script = {"LemonHub", "BlueXHub", "SpeedHubX", "NatHub","BonkHub","Chiyo","Bebas","JinkX","VectorHub","H4xScripts","Zeehub","Eps1llonHub","RonixHub"}
-local Other = {"Fiy", "Anti AFK", "infiniteyield",}
-local Graphics = {"RTX43523", "Pshadeultimate",}
-local fishtab = {"BonkHub", "SpeedHubX", "NatHub", "Chiyo", "Bebas", "JinkX",}
 
-
+local fishtab = {"BonkHub", "SpeedHubX", "NatHub", "Chiyo","JinkX",}
+local Jintab = {"JinkX",}
+local fishnokeytab = {"Bebas",}
 do
     pcall(function()
     Tabs.Home:AddParagraph({
@@ -56,17 +53,17 @@ do
     })
     end)
 
-    Tabs.Script:AddSection(" Key / มีคีย์ ")
+    Tabs.Fish:AddSection(" Key / มีคีย์ ")
 
     local Dropdown = Tabs.Fish:AddDropdown("Dropdown", {
         Title = "Select Scripts",
-        Values = Script,
+        Values = fishtab,
         Multi = false,
         Default = "เลือกสคริปต์",
     })
 
     Dropdown:OnChanged(function(Value)
-        Scripts = Value
+        fishs = Value
     end)
 
     Tabs.Fish:AddButton({
@@ -81,13 +78,35 @@ do
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"))();
             elseif fishs == "Chiyo" then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/kaisenlmao/loader/refs/heads/main/chiyo.lua"))();
-            elseif fishs == "Bebas" then
-                loadstring(game:HttpGet("https://gist.githubusercontent.com/OmarBinLadek/25e75529e18b38e5d38beab9126fc004/raw/6d1c1c5e0e91373654d2f85ebb65e8221728e26d/freefishit.lua"))();
             elseif fishs == "JinkX" then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/stormskmonkey/JinkX/refs/heads/main/Loader.lua"))();
             end
         end
     })
+
+    Tabs.Fish:AddSection(" NoKey / ไม่มีคีย์ ")
+
+    local Dropdown = Tabs.Fish:AddDropdown("Dropdown", {
+        Title = "Select Scripts",
+        Values = fishnokeytab,
+        Multi = false,
+        Default = "เลือกสคริปต์",
+    })
+
+    Dropdown:OnChanged(function(Value)
+        fishs = Value
+    end)
+
+    Tabs.Fish:AddButton({
+        Title = "Click To Execute",
+        Description = "กดเพื่อรันสคริปต์",
+        Callback = function()
+            if fishs == "Bebas" then
+                loadstring(game:HttpGet("https://gist.githubusercontent.com/OmarBinLadek/25e75529e18b38e5d38beab9126fc004/raw/6d1c1c5e0e91373654d2f85ebb65e8221728e26d/freefishit.lua"))();
+            end
+        end
+    })
+
 
     Tabs.Fish:AddSection(" ไก่ตัน ")
 
@@ -152,8 +171,80 @@ do
             end
         end
     })
-end
-    
+
+    Tabs.Player:AddSection(" Movement ")
+
+        local Input = Tabs.Player:AddInput("Input", {
+            Title = "WalkSpeed",
+            Default = "20",
+            Placeholder = "",
+            Numeric = false,
+            Finished = false,
+            Callback = function(Value)
+                Speed = Value
+            end
+        })
+
+        Input:OnChanged(function()
+            --print("Set Speed :", Input.Value)
+        end)
+        
+        Tabs.Player:AddButton({
+            Title = "Set WalkSpeed",
+            Description = "กดเพื่อเปลี่ยนความเร็ว",
+            Callback = function()
+                LocalPlr.Character.Humanoid.WalkSpeed = Speed
+            end
+        })
+
+        local Input = Tabs.Player:AddInput("Input", {
+            Title = "JumpPower",
+            Default = "50",
+            Placeholder = "",
+            Numeric = false,
+            Finished = false,
+            Callback = function(Value)
+                Jump = Value
+            end
+        })
+
+        Input:OnChanged(function()
+            --print("Set Speed :", Input.Value)
+        end)
+
+        Tabs.Player:AddButton({
+            Title = "Set JumpPower",
+            Description = "กดเพื่อเปลี่ยนพลังกระโดด",
+            Callback = function()
+                LocalPlr.Character.Humanoid.JumpPower = Jump
+            end
+        })
+
+        Tabs.Player:AddSection(" Modes ")
+
+        Tabs.Player:AddToggle("InfiniteJumpToggle", {
+        Title = "Infinite Jump",
+        Default = false,
+        Description = "เปิดเพื่อกระโดดไม่จำกัด",
+        Callback = function(state)
+            InfiniteJumpEnabled = state
+            if InfiniteJumpEnabled then
+                StarterGui:SetCore("SendNotification", {
+                    Title = "Infinite Jump",
+                    Text = state and "เปิดใช้งานแล้ว" or "ปิดการใช้งานแล้ว",
+                    Duration = 2
+                })
+            end
+        end
+    })
+
+        -- เชื่อมการกดกระโดดเข้ากับฟังก์ชัน
+        game:GetService("UserInputService").JumpRequest:Connect(function()
+            if InfiniteJumpEnabled and LocalPlr.Character and LocalPlr.Character:FindFirstChildOfClass("Humanoid") then
+                LocalPlr.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+            end
+        end)
+    end    
 
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
