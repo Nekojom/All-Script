@@ -15,7 +15,7 @@ pcall(function()
     elseif game.GameId == 6701277882 then -- Fish It
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Fish%20It"))();
     elseif game.GameId == 994732206 then -- Blox Fruits
-        loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))();
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Blox%20Fruits"))();
     elseif game.GameId == 5750914919 then -- Fisch
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Fisch"))();
         -- local Settings = {
