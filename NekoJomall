@@ -16,6 +16,8 @@ pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Fish%20It"))();
     elseif game.GameId == 994732206 then -- Blox Fruits
         loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))();
+    elseif game.GameId == 5750914919 then -- Fisch
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Fisch"))();
         -- local Settings = {
         -- JoinTeam = "Pirates";
         -- Translator = true;
