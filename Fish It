@@ -31,6 +31,8 @@ local StarterGui = game:GetService("StarterGui")
 local fishtab = {"BonkHub", "SpeedHubX", "NatHub", "Chiyo","JinkX",}
 local Jintab = {"JinkX",}
 local fishnokeytab = {"Bebas",}
+
+
 do
     pcall(function()
     Tabs.Home:AddParagraph({
