@@ -25,7 +25,7 @@ pcall(function()
     elseif game.GameId == 7750955984 then -- Hunty zombie
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Hunty%20zombie"))();
     elseif game.GameId == 8316902627 then -- Plants Vs Brainrots
-        loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))();
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Plants%20vs%20Brainrot"))();
     else
         task.wait(2)
         game.Players.LocalPlayer:Kick("Not Support PlaceId: " .. game.PlaceId .. "\nไม่ซัพพอร์ตแมพนี้");
