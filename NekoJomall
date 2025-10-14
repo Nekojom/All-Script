@@ -10,8 +10,8 @@ pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostSobe/Script/refs/heads/main/Prospecting"))();
     elseif game.PlaceId == 292439477 then -- Phantom Forces
         loadstring(game:HttpGet("https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/loader.lua"))();
-    elseif game.PlaceId == 126884695634066 or game.PlaceId == 91867617264223 then -- Grow a Garden
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostSobe/Script/refs/heads/main/GrowaGarden"))();
+    elseif game.GameId == 8066283370 then -- Build a Zoo
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Build%20a%20Zoo"))();
     elseif game.GameId == 6701277882 then -- Fish It
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nekojom/All-Script/refs/heads/main/Fish%20It"))();
     elseif game.GameId == 994732206 then -- Blox Fruits
