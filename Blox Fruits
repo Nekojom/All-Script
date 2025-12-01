@@ -28,8 +28,8 @@ local LocalPlr = Plr.LocalPlayer
 local StarterGui = game:GetService("StarterGui")
 
 
-local bloxtab = {"BonkHub", "BlueXHub", "VectorHub", "RadzHub","NatHub","AlchemuHub","SolixHub","HohoHub",}
-local bloxnokeytab = {"XeterHubV3","Zeehub","OmgHub",}
+local bloxtab = {"BonkHub", "BlueXHub", "VectorHub","NatHub","AlchemuHub","SolixHub","HohoHub",}
+local bloxnokeytab = {"XeterHubV3","Zeehub","OmgHub","Gravityhub","Hiruhub",}
 
 do
     pcall(function()
