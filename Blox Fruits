@@ -29,7 +29,7 @@ local StarterGui = game:GetService("StarterGui")
 
 
 local bloxtab = {"BonkHub", "BlueXHub", "VectorHub","NatHub","AlchemuHub","SolixHub","HohoHub",}
-local bloxnokeytab = {"XeterHubV3","Zeehub","OmgHub","Gravityhub","Hiruhub",}
+local bloxnokeytab = {"XeterHubV3","Zeehub","OmgHub","Gravityhub","Hiruhub","QuantumOnyx",}
 
 do
     pcall(function()
@@ -123,8 +123,11 @@ do
                 Team = "Marines"-- Pirates or Marines
                 }
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KiddoHiru/BloxFruits/main/Source.lua"))();
+                elseif bloxs == "QuantumOnyx" then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))();
             end
         end
+
     })
 
     Tabs.Player:AddSection(" Movement ")
