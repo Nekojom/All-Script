@@ -28,8 +28,8 @@ local LocalPlr = Plr.LocalPlayer
 local StarterGui = game:GetService("StarterGui")
 
 
-local bloxtab = {"BonkHub", "BlueXHub", "VectorHub", "RadzHub","NatHub","AlchemuHub","SolixHub",}
-local bloxnokeytab = {"XeterHubV3","Zeehub",}
+local bloxtab = {"BonkHub", "BlueXHub", "VectorHub", "RadzHub","NatHub","AlchemuHub","SolixHub","HohoHub",}
+local bloxnokeytab = {"XeterHubV3","Zeehub","OmgHub",}
 
 do
     pcall(function()
@@ -77,21 +77,15 @@ do
                 elseif bloxs == "BlueXHub" then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))();
                 elseif bloxs == "VectorHub" then
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/AAwful/Vector_Hub/0/v2"))();
-                elseif bloxs == "RadzHub" then
-                local Settings = {
-                JoinTeam = "Pirates"; -- Pirates/Marines
-                Translator = true; -- true/false
-                }
-                
-                getgenv().BETA_VERSION = true
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))(Settings);
+                loadstring(game:HttpGet("https://vectorhub.space"))();
                 elseif bloxs == "NatHub" then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"))();
                 elseif bloxs == "AlchemuHub" then
                 loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))();
                 elseif bloxs == "SolixHub" then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/meobeo8/a/a/a"))();
+                elseif bloxs == "HohoHub" then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))();
             end
         end
     })
@@ -119,6 +113,16 @@ do
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/TlDinhKhoi/Xeter/refs/heads/main/Main.lua"))();
                 elseif bloxs == "Zeehub" then
                 loadstring(game:HttpGet("https://link.trwxz.com/LS-Zee-Hub-VIP"))();
+                elseif bloxs == "OmgHub" then
+                loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/20f318386e3fbf069ee3fa797cfc9f34.lua"))();
+                elseif bloxs == "Gravityhub" then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))();
+                elseif bloxs == "Hiruhub" then
+                getgenv().Settings = {
+                JoinTeam = true,
+                Team = "Marines"-- Pirates or Marines
+                }
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/KiddoHiru/BloxFruits/main/Source.lua"))();
             end
         end
     })
