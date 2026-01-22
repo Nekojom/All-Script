@@ -29,7 +29,7 @@ local StarterGui = game:GetService("StarterGui")
 
 
 local bloxtab = {"BonkHub", "BlueXHub", "VectorHub","NatHub","AlchemuHub","SolixHub","HohoHub",}
-local bloxnokeytab = {"XeterHubV3","Zeehub","OmgHub","Gravityhub","Hiruhub","QuantumOnyx",}
+local bloxnokeytab = {"XeterHubV3","Zeehub","OmgHub","Gravityhub","Hiruhub","Nighthub","Quantumhub",}
 
 do
     pcall(function()
@@ -118,12 +118,11 @@ do
                 elseif bloxs == "Gravityhub" then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))();
                 elseif bloxs == "Hiruhub" then
-                getgenv().Settings = {
-                JoinTeam = true,
-                Team = "Marines"-- Pirates or Marines
-                }
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/KiddoHiru/BloxFruits/main/Source.lua"))();
-                elseif bloxs == "QuantumOnyx" then
+                repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+                loadstring(game:HttpGet("https://luacrack.site/raw.php/HiruHub/raw/Loader/HiruHubFree.lua"))();
+                elseif bloxs == "Nighthub" then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/WhiteX1208/Scripts/refs/heads/main/BF-Beta.lua"))();
+                elseif bloxs == "Quantumhub" then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))();
             end
         end
